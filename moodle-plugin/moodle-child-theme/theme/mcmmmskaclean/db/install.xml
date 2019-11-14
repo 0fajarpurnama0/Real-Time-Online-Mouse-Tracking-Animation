@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="theme/mcmmmskaclean/db" VERSION="20190611" COMMENT="XMLDB file for Moodle theme/mcmmmskaclean"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+  <TABLES>
+    <TABLE NAME="theme_mcmmmskaclean" COMMENT="Storage of Mouse Clicks Mouse Movements Mouse Scroll Keyboard Animation Logs.">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="name" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="The name of user."/>
+        <FIELD NAME="email" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Email of user."/>
+        <FIELD NAME="date" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="The date during event."/>
+        <FIELD NAME="x" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="Horizontal coordinate point of mouse cursor."/>
+        <FIELD NAME="y" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="Vertical coordinate point of mouse cursor."/>
+        <FIELD NAME="tab" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Whether mouse is inside or outside tab."/>
+        <FIELD NAME="duration" TYPE="number" LENGTH="9" NOTNULL="false" SEQUENCE="false" DECIMALS="3" COMMENT="Duration of event."/>
+        <FIELD NAME="current_url" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Url during event."/>
+        <FIELD NAME="ip_address" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="IP Address origin of user."/>
+        <FIELD NAME="samplingmode" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Whether sampling mode is active."/>
+        <FIELD NAME="leftclick" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Whether left click was performed."/>
+        <FIELD NAME="rightclick" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Whether rightclick was performed."/>
+        <FIELD NAME="middleclick" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Whether middle click was performed."/>
+		<FIELD NAME="touch" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Whether touch was performed."/>
+        <FIELD NAME="keyboardtype" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="Keyboard typed."/>
+        <FIELD NAME="scrollx" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="Horizontal scrolls."/>
+        <FIELD NAME="scrolly" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="Vertical scrolls."/>
+        <FIELD NAME="windowwidth" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="Width of browser window."/>
+        <FIELD NAME="windowheight" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="Height of browser window."/>
+		<FIELD NAME="screenwidth" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="Width of browser screen."/>
+        <FIELD NAME="screenheight" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="Height of browser screen."/>
+		<FIELD NAME="zoom" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="Zoom of browswer."/>
+		<FIELD NAME="event_type" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Event type."/>	
+        <FIELD NAME="restrictedfocusviewer" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Whether restricted focus viewer is active."/>
+        <FIELD NAME="bubbleview" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Whether bubble view is active."/>
+        <FIELD NAME="fingertracinglearningsystem" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Whether finger tracing learning system is active."/>
+        <FIELD NAME="cursorreminder" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Whether cursor reminder is active."/>
+        <FIELD NAME="transparency" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Transparency control of DOM elements."/>
+        <FIELD NAME="magnifier" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="Setting of no less than specified font size."/>
+        <FIELD NAME="textcolor" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="Store text color animation if active."/>
+        <FIELD NAME="backgroundcolor" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="Store background color animation if active."/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+    </TABLE>
+  </TABLES>
+</XMLDB>

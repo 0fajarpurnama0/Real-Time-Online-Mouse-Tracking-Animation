@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Test Extension Options</title>
+</head>
+<body>
+	<p>Hello, please support us in our user interraction project by allowing us to record your interractions:</p>
+	
+	<br /> <br /> What is your name? (leave blank if you want to be anonymous) <input type="text" id="name" /> <br />
+	<br /> <br /> Do you have an email address? (leave blank if you want to be anonymous) <input type="text" id="email" /> <br /> <br />
+	
+	Animations to draw the eye gaze to the mouse cursor:
+	<ul> 
+	<li> <input type="checkbox" id="restricted-focus-viewer-imitation-checkbox"> Restricted Focus Viewer Imitation </li>
+	<li> <input type="checkbox" id="bubble-view-imitation-checkbox">Bubble View Imitation </li>
+	<li> <input type="checkbox" id="finger-tracing-learning-system-imitation-checkbox">Finger Tracing Learning System Imitation </li>
+	<li> Transparency Per Element Control (viewser imitation) <br /> <input type="range" min="0" max="100" value="100" id="transparency-control"> <p id="transparency-control-text"> </p> </li>
+	<li> Fontsize magnifier Per Element <br /> <input type="range" min="1" max="100" value="1" id="fontsize-magnifier"> <p id="fontsize-magnifier-text"> </p>  </li>
+	<li> <input type="checkbox" id="background-color-checkbox"> Background Color </li>
+	<li> <input type="color" id="background-color" value="#f3fafd"> </li> 
+	<li> <input type="checkbox" id="color-checkbox"> Text Color </li> 
+	<li> <input type="color" id="color" value="#001014"> </li>
+	<li> Cursor Reminder  <input type="range" min="0" max="60" value="0" id="cursor-reminder"> <p id="cursor-reminder-text"> </p> </li> 
+	</ul>
+	
+	<input type="checkbox" id="logging"> Loggings
+	<ul> 
+	<li><input type="checkbox" id="sampling-rate-mode-checkbox"> Sampling Rate Mode <br /> <input type="range" min="1" max="90" value="1" id="sampling-rate"> <p id="sampling-rate-text"> </p> </li>
+	<li>Computer:</li>
+	<li><input type="checkbox" id="mouseclick"> Mouse Click</li>
+	<li><input type="checkbox" id="mousemove"> Mouse Move</li> 
+	<li><input type="checkbox" id="mousescroll"> Mouse Scroll</li> 
+	<li><input type="checkbox" id="keyboardpress"> Keyboard Press</li>
+	<li><input type="checkbox" id="zoom"> Zoom</li>
+	<li><input type="checkbox" id="event-type"> Event Type</li>
+	<li>Mobile:</li>
+	<li><input type="checkbox" id="touch"> Touch</li>
+	<li><input type="checkbox" id="touchmove"> Touch Move</li> 
+	</ul>
+	
+	Other loggings:
+	<ul> 
+	<li><input type="checkbox" id="tabstatus-checkbox" checked="checked"> Tab Status</li> 
+	<li><input type="checkbox" id="name-checkbox" checked="checked"> Name</li> 
+	<li><input type="checkbox" id="email-checkbox" checked="checked"> Email</li> 
+	<li><input type="checkbox" id="windowsize-checkbox" checked="checked"> Window Size</li>
+	<li><input type="checkbox" id="screensize-checkbox" checked="checked"> Screen Size</li> 
+	<li><input type="checkbox" id="currenturl-checkbox" checked="checked"> Current URL </li> 
+	<li><input type="checkbox" id="ipaddress-checkbox" checked="checked"> IP Address </li> 
+	<li><input type="checkbox" id="date-checkbox" checked="checked"> Date </li> 
+	<li><input type="checkbox" id="duration-checkbox" checked="checked"> Duration </li> 
+	</ul>
+	
+	<input type="checkbox" id="demo-checkbox"> Demo Logging <br />
+	<br /> <input type="checkbox" id="data-to-file-on-fly-checkbox"> Data to file on fly<input type="text" id="data-to-file-on-fly" value="files/savedatafiledefault.php" />
+	<br /> <input type="checkbox" id="data-to-database-on-fly-checkbox"> Data to database on fly<input type="text" id="data-to-database-on-fly" value="files/savedatabasedefaulteach.php" />
+	
+	<button id="save">save changes</button>
+	<script src="jquery-3-3-1.js"></script>
+	<script src="option.js"></script>
+
+</body>
+</html>

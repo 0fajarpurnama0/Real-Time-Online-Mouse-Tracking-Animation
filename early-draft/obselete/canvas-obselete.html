@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title>Title</title>
+
+  <link rel="stylesheet" href="mousetrail.css"/>
+  <style></style>
+  
+</head>
+
+<body>
+<button id="generate-canvas">generate</button><br />
+  <button id="load">load</button><br />
+<input type="file" onchange="previewFile()"><br>
+<canvas id="canvas" width="auto" height="auto"></canvas><br />
+<img id="scream" src="" alt="Image preview..." >
+  
+  <script src="jquery-3-3-1.js"></script>
+  <script src="jcanvas-21-0-1.js"></script>
+  <script src="mousetrail.js"></script>
+  <script>
+       function previewFile(){
+       var preview = document.querySelector('img'); //selects the query named img
+       var file    = document.querySelector('input[type=file]').files[0]; //sames as here
+       var reader  = new FileReader();
+         
+       reader.onloadend = function () {
+          
+           preview.src = reader.result;
+           
+       }
+       
+       $("canvas").attr({"width": preview.width, "height": preview.height});
+       if (file) {
+           reader.readAsDataURL(file); //reads the data as a URL
+       } else {
+           preview.src = "";
+       }
+
+  }
+$( "#load" ).click(function() {       
+  $('canvas').drawImage({
+    layer: true,
+    source: document.getElementById("scream"),
+    fromCenter: false
+  });
+});
+    
+    /*
+	$('#generate-heat-map').click(function(){
+		$.each( $y, function( index, value ){
+			$('canvas').drawArc({
+  			fillStyle: 'hsla('+ (180 - ($duration[index] / Math.max(...$duration) * 180)) +', 100%, 50%, '+ '0.2' +')',
+				layer: true,
+  			x: $x[index], y: $y[index],
+  			radius: 10
+			});
+		});
+  });
+	$x = [55, 22, 37, 78, 14, 78, 94, 100, 100, 10];
+	$y = [123, 350, 232, 67, 280, 190, 333, 222, 123, 123];
+	$('#grid-dimension').change(function(){
+		$('#grid-dimension-text').text($(this).val() + 'x' + $(this).val());
+		$.each( $x, function( index, value ){
+				function round_to_grid_dimension($input){
+					for ($i = 1; $i <= $('#grid-dimension').val() ; $i++) { 
+    			//$('#test-box').append($i);
+						if($input[index] < Math.max(...$input)*$i/$('#grid-dimension').val()){
+							if($i>1){
+								if($input[index] - Math.max(...$input)*($i-1)/$('#grid-dimension').val() < Math.max(...$input)*$i/$('#grid-dimension').val() - $input[index]){
+									$input[index] = (Math.max(...$input)*($i-1)/$('#grid-dimension').val()) - ((1/$('#grid-dimension').val()*Math.max(...$input))/2);
+								} else {
+									$input[index] = (Math.max(...$input)*$i/$('#grid-dimension').val()) - ((1/$('#grid-dimension').val()*Math.max(...$input))/2);
+								}
+								break;
+							} else {
+								$input[index] = (Math.max(...$input)*$i/$('#grid-dimension').val()) - ((1/$('#grid-dimension').val()*Math.max(...$input))/2);
+								break;
+							}
+						}
+					}
+					return $input;
+				}
+			$x = round_to_grid_dimension($x);
+			$y = round_to_grid_dimension($y);
+			$('#test-box').append($x[index] + ' ');
+		});
+	})
+	*/
+  </script>
+</body>
+</html>
