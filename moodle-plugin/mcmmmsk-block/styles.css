@@ -1,0 +1,19 @@
+#mousetrail, #mousetrail th, #mousetrail td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.sticky {
+  font-size: calc(12px + 1vw);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 50px;
+  padding: 5px;
+  background-color: #cae8ca;
+  border: 2px solid #4CAF50;
+  z-index: 2;
+}
+
+#dialog {
+  display: none
+}

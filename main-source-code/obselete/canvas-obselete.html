@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title>Title</title>
+
+  <link rel="stylesheet" href="mousetrail.css"/>
+  <style></style>
+  
+</head>
+
+<body>
+<button id="generate-canvas">generate</button><br />
+  <button id="load">load</button><br />
+<input type="file" onchange="previewFile()"><br>
+<canvas id="canvas" width="auto" height="auto"></canvas><br />
+<img id="scream" src="" alt="Image preview..." >
+  
+  <script src="jquery-3-3-1.js"></script>
+  <script src="jcanvas-21-0-1.js"></script>
+  <script src="mousetrail.js"></script>
+  <script>
+       function previewFile(){
+       var preview = document.querySelector('img'); //selects the query named img
+       var file    = document.querySelector('input[type=file]').files[0]; //sames as here
+       var reader  = new FileReader();
+         
+       reader.onloadend = function () {
+          
+           preview.src = reader.result;
+           
+       }
+       
+       $("canvas").attr({"width": preview.width, "height": preview.height});
+       if (file) {
+           reader.readAsDataURL(file); //reads the data as a URL
+       } else {
+           preview.src = "";
+       }
+
+  }
+$( "#load" ).click(function() {       
+  $('canvas').drawImage({
+    layer: true,
+    source: document.getElementById("scream"),
+    fromCenter: false
+  });
+});
+  </script>
+</body>
+</html>

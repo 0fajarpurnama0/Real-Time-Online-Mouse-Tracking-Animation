@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Quiz Mouse Tracking Animation</title>
+  <style>
+  div.quiz, div.quiz input, div.quiz select, div.quiz textarea {
+	font-size: calc(10px + 1vw);
+  }
+  </style>
+  <link rel="stylesheet" href="vendors/jquery-ui.css"/>
+  <link rel="stylesheet" href="resources/logging.css"/>
+</head>
+<body>
+<div class="quiz">
+	<form>
+		<ol>
+			<li> <p>What is your name:</p> <br />
+				<input type="text" name="firstname" value="First Name"></input>
+				<input type="text" name="firstname" value="Last Name"></input>
+			</li>
+			<br /> <br />
+			
+			<li> <p>Gender:</p> </li>
+				<span>
+					<input type="radio" name="gender" value="male"> Male </input>
+				</span>
+				<span>
+					<input type="radio" name="gender" value="female"> Female </input>
+				</span>
+			
+			<br /><br />
+			
+			<li> <p>Current Study Program:</p> <br />
+			<select name="current-study-program">
+				<option value="saab">Bachelor</option>
+				<option value="fiat">Master</option>
+				<option value="audi">Doctoral</option>
+			</select>
+			</li>
+			<br /> <br />
+			
+			 <li> <p>Since around when have you heard about cryptocurrency (bitcoin, etc)?</p> <br />
+				<input type="date" id="start" name="trip" value="2008-10-01" min="2008-10-01" max="2018-12-31" />
+			</li>
+			<br /> <br />
+			
+			<li> <p>Have you ever owned cryptocurrency coins? (check those that applies and no need to answer if none)</p> <br />
+				<input type="checkbox" name="coin" value="bitcoin"> bitcoin </input>
+				<input type="checkbox" name="coin" value="bitcoincash"> bitcoincash </input>
+				<input type="checkbox" name="coin" value="ethereum"> ethereum </input>
+				<input type="checkbox" name="coin" value="litecoin"> litecoin </input>
+				<input type="checkbox" name="coin" value="monero"> monero </input>
+				<input type="checkbox" name="coin" value="gamecredits"> gamecredits </input>
+				<input type="checkbox" name="coin" value="webchain"> webchain </input>
+				<input type="checkbox" name="coin" value="others">  others  </input> <br /> <textarea name="coin"></textarea>
+			</li>
+			<br /> <br />
+			
+			<li> <p>Have you ever mined cryptocurrency coins? (check those that applies and no need to answer if none)</p><br />
+				<input type="checkbox" name="mined" value="bitcoin"> bitcoin </input>
+				<input type="checkbox" name="mined" value="bitcoincash"> bitcoincash </input>
+				<input type="checkbox" name="mined" value="ethereum"> ethereum </input>
+				<input type="checkbox" name="mined" value="litecoin"> litecoin </input>
+				<input type="checkbox" name="mined" value="monero"> monero </input>
+				<input type="checkbox" name="mined" value="gamecredits"> gamecredits </input>
+				<input type="checkbox" name="mined" value="webchain"> webchain </input>
+				<input type="checkbox" name="mined" value="webchain">  others  </input> <br /> <textarea name="coin"></textarea>
+			</li>
+			<br /> <br />
+
+			<li> <p>Have you ever exchanged cryptocurrency coins to physical currencies? (check those that applies and no need to answer if none)</p> <br />
+				<input type="checkbox" name="exchanged" value="bitcoin"> bitcoin </input>
+				<input type="checkbox" name="exchanged" value="bitcoincash"> bitcoincash </input>
+				<input type="checkbox" name="exchanged" value="ethereum"> ethereum </input>
+				<input type="checkbox" name="exchanged" value="litecoin"> litecoin </input>
+				<input type="checkbox" name="exchanged" value="monero"> monero </input>
+				<input type="checkbox" name="exchanged" value="gamecredits"> gamecredits </input>
+				<input type="checkbox" name="exchanged" value="webchain"> webchain </input>
+				<input type="checkbox" name="exchanged" value="webchain">  others </input> <br /> <textarea name="coin"></textarea>
+			</li>
+			<br /> <br />
+			
+			<li> <p>Have you ever sent cryptocurrency coins for payments (shopping, etc)? (check those that applies and no need to answer if none)</p> <br />
+				<input type="checkbox" name="exchanged" value="bitcoin"> bitcoin </input>
+				<input type="checkbox" name="exchanged" value="bitcoincash"> bitcoincash </input>
+				<input type="checkbox" name="exchanged" value="ethereum"> ethereum </input>
+				<input type="checkbox" name="exchanged" value="litecoin"> litecoin </input>
+				<input type="checkbox" name="exchanged" value="monero"> monero </input>
+				<input type="checkbox" name="exchanged" value="gamecredits"> gamecredits </input>
+				<input type="checkbox" name="exchanged" value="webchain"> webchain </input>
+				<input type="checkbox" name="exchanged" value="webchain">  others </input> <br /> <textarea name="coin"></textarea>
+			</li>
+			<br /> <br />
+			
+			<li> <p>Have you ever received cryptocurrency coins for payments (merchant, etc)? (check those that applies and no need to answer if none)</p> <br />
+				<input type="checkbox" name="exchanged" value="bitcoin"> bitcoin </input>
+				<input type="checkbox" name="exchanged" value="bitcoincash"> bitcoincash </input>
+				<input type="checkbox" name="exchanged" value="ethereum"> ethereum </input>
+				<input type="checkbox" name="exchanged" value="litecoin"> litecoin </input>
+				<input type="checkbox" name="exchanged" value="monero"> monero </input>
+				<input type="checkbox" name="exchanged" value="gamecredits"> gamecredits </input>
+				<input type="checkbox" name="exchanged" value="webchain"> webchain </input>
+				<input type="checkbox" name="exchanged" value="webchain">  others </input> <br /> <textarea name="coin"></textarea>
+			</li>
+			<br /> <br />
+			
+			<li> <p>Comment:</p> <br />
+			<textarea name="comment">What do you think?</textarea>
+			</li>
+		</ol>
+	</form>
+</div>
+ 
+<script src="vendors/jquery-3-3-1.js"></script>
+<script src="vendors/jquery-ui.js"></script>
+<script src="vendors/html2canvas.js"></script>
+<script src="resources/config.js"></script>
+ 
+</body>
+<footer>
+</footer>
+</html>

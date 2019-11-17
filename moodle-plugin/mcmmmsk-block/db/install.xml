@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="blocks/mcmmmsk/db" VERSION="2019061100" COMMENT="XMLDB file for Moodle blocks/mcmmmsk"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+  <TABLES>
+    <TABLE NAME="block_mcmmmsk" COMMENT="Storage of Mouse Clicks Mouse Movements Mouse Scroll Keyboard Logs.">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="name" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="The name of user."/>
+        <FIELD NAME="email" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Email of user."/>
+        <FIELD NAME="date" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="The date during event."/>
+        <FIELD NAME="x" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="Horizontal coordinate point of mouse cursor."/>
+        <FIELD NAME="y" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="Vertical coordinate point of mouse cursor."/>
+        <FIELD NAME="tab" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Whether mouse is inside or outside tab."/>
+        <FIELD NAME="duration" TYPE="number" LENGTH="9" NOTNULL="false" SEQUENCE="false" DECIMALS="3" COMMENT="Duration of event."/>
+        <FIELD NAME="current_url" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Url during event."/>
+        <FIELD NAME="ip_address" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="IP Address origin of user."/>
+        <FIELD NAME="samplingmode" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Whether sampling mode is active."/>
+        <FIELD NAME="leftclick" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Whether left click was performed."/>
+        <FIELD NAME="rightclick" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Whether rightclick was performed."/>
+        <FIELD NAME="middleclick" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Whether middle click was performed."/>
+	<FIELD NAME="touch" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Whether touch was performed."/>
+        <FIELD NAME="keyboardtype" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="Keyboard typed."/>
+        <FIELD NAME="scrollx" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="Horizontal scrolls."/>
+        <FIELD NAME="scrolly" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="Vertical scrolls."/>
+        <FIELD NAME="windowwidth" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="Width of browser window."/>
+        <FIELD NAME="windowheight" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="Height of browser window."/>
+	<FIELD NAME="screenwidth" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="Width of browser screen."/>
+        <FIELD NAME="screenheight" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="Height of browser screen."/>
+	<FIELD NAME="zoom" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="Zoom of browswer."/>
+	<FIELD NAME="event_type" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Event Type."/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+    </TABLE>
+
+    <TABLE NAME="block_mcmmmsk_page" COMMENT="Storage of Pagetracking.">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="name" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="The name of user."/>
+        <FIELD NAME="email" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Email of user."/>
+        <FIELD NAME="date" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="The date during event."/>
+        <FIELD NAME="duration" TYPE="number" LENGTH="9" NOTNULL="false" SEQUENCE="false" DECIMALS="3" COMMENT="Duration of event."/>
+        <FIELD NAME="current_url" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Url during event."/>
+        <FIELD NAME="ip_address" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="IP Address origin of user."/>
+        <FIELD NAME="leftclick" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Number of left click."/>
+        <FIELD NAME="rightclick" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Number of right click."/>
+        <FIELD NAME="middleclick" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Number of middle click."/>
+	<FIELD NAME="mousemove" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Number of mousemove."/>
+	<FIELD NAME="scroll" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Number of scroll."/>
+        <FIELD NAME="keyboardtype" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="Keyboard typed."/>
+	<FIELD NAME="zoom" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="Zoom of browswer."/>
+	<FIELD NAME="active" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Number of active."/>
+	<FIELD NAME="inactive" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Number of inactive."/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+    </TABLE>
+
+    <TABLE NAME="block_mcmmmsk_roi" COMMENT="Storage of Roitracking.">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="name" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="The name of user."/>
+        <FIELD NAME="email" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Email of user."/>
+        <FIELD NAME="date" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="The date during event."/>
+        <FIELD NAME="area" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Page area."/>
+        <FIELD NAME="duration" TYPE="number" LENGTH="9" NOTNULL="false" SEQUENCE="false" DECIMALS="3" COMMENT="Duration of event."/>
+        <FIELD NAME="current_url" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Url during event."/>
+        <FIELD NAME="ip_address" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="IP Address origin of user."/>
+        <FIELD NAME="leftclick" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Number of left click."/>
+        <FIELD NAME="rightclick" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Number of right click."/>
+        <FIELD NAME="middleclick" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Number of middle click."/>
+	<FIELD NAME="mousemove" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Number of mousemove."/>
+	<FIELD NAME="scroll" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Number of scroll."/>
+        <FIELD NAME="keyboardtype" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="Keyboard typed."/>
+	<FIELD NAME="zoom" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="Zoom of browswer."/>
+	<FIELD NAME="active" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Number of active."/>
+	<FIELD NAME="inactive" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Number of inactive."/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+    </TABLE>
+  </TABLES>
+</XMLDB>
